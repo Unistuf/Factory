@@ -6,6 +6,8 @@ using TMPro;
 
 public class CrafterButton : MonoBehaviour
 {
+    public RawImage iconImage;
+
     [Header("DONT TOUCH, CHANGED ON RUNTIME")]
     public Recipe recipe;
     public int id;
@@ -18,6 +20,6 @@ public class CrafterButton : MonoBehaviour
 
     public void UpdateUI()
     {
-
+        iconImage.texture = recipe.recipeImage;
     }
 }

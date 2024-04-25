@@ -14,6 +14,8 @@ public class Item
 [Serializable]
 public class Recipe
 {
+    public string displayName;
+    public Texture recipeImage;
     public Item[] inputs;
     public Item[] outputs;
 

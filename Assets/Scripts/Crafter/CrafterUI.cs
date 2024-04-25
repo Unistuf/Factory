@@ -1,18 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class CrafterUI : MonoBehaviour
 {
+    [Header("Recipe")]
     public Recipe[] recipes;
     public Recipe selectedRecipe;
 
+    [Header("Runtime")]
     public List<CrafterButton> crafterButtons;
-
     public CrafterScript currentCrafter;
 
+    [Header("Button Stuff")]
     public Transform buttonsStartPos;
     public GameObject crafterButtonPrefab;
+
+    [Header("Ui Elements")]
+    public GameObject infoMenu;
+    public TextMeshProUGUI recipeName;
+    public TextMeshProUGUI[] inputText;
+    public TextMeshProUGUI[] outputText;
+    public TextMeshProUGUI processTimeText;
+    public RawImage recipeImage;
+
+    void Update()
+    {
+        if (selectedRecipe != null)
+        {
+            infoMenu.SetActive(true);
+
+            recipeName.text = "" + selectedRecipe.displayName;
+            processTimeText.text = "" + selectedRecipe.productionTime + "s Production time";
+            recipeImage.texture = selectedRecipe.recipeImage;
+
+            for (int i = 0; i < selectedRecipe.inputs.Length; i++)
+            {
+                inputText[i].text = "" + selectedRecipe.inputs[i].amount + " " + selectedRecipe.inputs[i].name;
+            }
+            for (int i = 0; i < selectedRecipe.outputs.Length; i++)
+            {
+                outputText[i].text = "" + selectedRecipe.outputs[i].amount + " " + selectedRecipe.outputs[i].name;
+            }            
+        }
+        else{
+            infoMenu.SetActive(false);
+        }
+    }
 
     public void CreateIcons()
     {
@@ -40,12 +76,22 @@ public class CrafterUI : MonoBehaviour
             temp.id = i;
 
             temp.gameObject.transform.parent = buttonsStartPos;
+            temp.UpdateUI();
         }
     }
 
     public void SelectButton(int number)
     {
         selectedRecipe = recipes[number];
+
+        for (int i = 0; i < inputText.Length; i++)
+        {
+            inputText[i].text = "";
+        }
+        for (int i = 0; i < outputText.Length; i++)
+        {
+            outputText[i].text = "";
+        } 
     }
 
     public void ConfirmSelection()

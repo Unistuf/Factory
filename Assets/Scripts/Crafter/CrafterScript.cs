@@ -24,6 +24,7 @@ public class CrafterScript : MonoBehaviour
         crafterUI.gameObject.SetActive(true);
         crafterUI.currentCrafter = this;
         crafterUI.recipes = recipeOptions;
+        crafterUI.selectedRecipe = null;
 
         crafterUI.CreateIcons();
     }
