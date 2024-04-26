@@ -1976,10 +1976,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - itemImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
-    name: Metal
-    amount: 10000
+    name: Raw Metal
+    amount: 1
   - itemImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
-    name: Processed Metal
+    name: Machined Metal
+    amount: 1
+  - itemImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    name: Mechanical Parts
+    amount: 1
+  - itemImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    name: Electronic Scrap
+    amount: 1
+  - itemImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    name: Battery
+    amount: 1
+  - itemImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    name: Water
+    amount: 1
+  - itemImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    name: Hydraulic Fluid
+    amount: 1
+  - itemImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    name: Robot Parts
+    amount: 1
+  - itemImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    name: Uranium
+    amount: 1
+  - itemImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    name: Depleted Uranium
     amount: 1
 --- !u!4 &1041300400
 Transform:
