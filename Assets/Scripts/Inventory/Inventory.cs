@@ -28,7 +28,7 @@ public class Inventory : MonoBehaviour
     public Item[] items;
 
 
-    public void AddItem(string name, int amount)
+    public void AddItem(string name, int amount) //Add an amount of items to the inventory given a name (string) and an amount (int)
     {
         for (int i = 0; i < items.Length; i++)
         {
@@ -39,7 +39,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void RemoveItem(string name, int amount)
+    public void RemoveItem(string name, int amount) //Remove an amount of items to the inventory given a name (string) and an amount (int)
     {
         for (int i = 0; i < items.Length; i++)
         {
@@ -50,7 +50,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public int GetItem(string name)
+    public int GetItem(string name) //Get a int of the amount of items the player has given a name (string)
     {
         int returnValue = 0;
 

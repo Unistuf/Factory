@@ -4,55 +4,61 @@ using UnityEngine;
 
 public class CrafterScript : MonoBehaviour
 {
+    [Header("PreRequisets")]
     public Inventory inventoryScript;
     public CrafterUI crafterUI;
+    public BuildScript buildScript;
 
+    [Header("Settings")]
     public Recipe[] recipeOptions;
 
+    [Header("Runtime")]
     public Recipe currentRecipe;
 
 
     void Start()
     {
         inventoryScript = GameObject.Find("Manager").GetComponent<Inventory>();
+        buildScript = GameObject.Find("Manager").GetComponent<BuildScript>();
 
         StartCoroutine(CraftLoop());
     }
 
-    void OnMouseDown()
+    void OnMouseDown() //Opens the crafting Ui when the crafting building is clicked
     {
-        crafterUI.gameObject.SetActive(true);
-        crafterUI.currentCrafter = this;
-        crafterUI.recipes = recipeOptions;
-        crafterUI.selectedRecipe = null;
+        if (buildScript.selectedBuilding != null)
+        {
+            crafterUI.gameObject.SetActive(true);
+            crafterUI.currentCrafter = this;
+            crafterUI.recipes = recipeOptions;
+            crafterUI.selectedRecipe = null;
 
-        crafterUI.CreateIcons();
+            crafterUI.CreateIcons();
+        }
     }
 
-    IEnumerator CraftLoop()
+    IEnumerator CraftLoop() //Creates items based on its craft time and resources
     {
         if (currentRecipe != null)
         {
-            bool CheckReqs = CheckRecipeRequirements();
+            bool CheckReqs = CheckRecipeRequirements(); 
 
-            if (CheckReqs)
+            if (CheckReqs) //Check if the player has enough resources
             {
-                CompleteRecipe();
-                yield return new WaitForSeconds(currentRecipe.productionTime);
-            }
-            else{
-                yield return new WaitForSeconds(1f);
-            }         
+                CompleteRecipe(); //Craft Item
+
+                yield return new WaitForSeconds(currentRecipe.productionTime); //Wait the production time
+            }   
         }
         else{
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1f); //If no recipe is selected wait a second
         }
 
         yield return new WaitForSeconds(0.1f);
-        StartCoroutine(CraftLoop());
+        StartCoroutine(CraftLoop()); //Restart Loop
     }
 
-    public bool CheckRecipeRequirements()
+    public bool CheckRecipeRequirements() //Check if the player has enough items to meet all the recipe requirements
     {
         bool result = true;
 
@@ -67,7 +73,7 @@ public class CrafterScript : MonoBehaviour
         return result;
     }
 
-    public void CompleteRecipe()
+    public void CompleteRecipe() //Give and remove items from the player based on the recipe
     {
         for (int i = 0; i < currentRecipe.inputs.Length; i++)
         {
