@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3827603956207724296}
   - component: {fileID: 7915830620076202195}
   - component: {fileID: 1520247927386335395}
+  - component: {fileID: 2123578431077793327}
   m_Layer: 0
   m_Name: Crafter
   m_TagString: Untagged
@@ -145,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryScript: {fileID: 0}
   crafterUI: {fileID: 0}
+  buildScript: {fileID: 0}
   recipeOptions:
   - displayName: Metal Processing
     recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
@@ -163,3 +165,18 @@ MonoBehaviour:
     inputs: []
     outputs: []
     productionTime: 0
+--- !u!114 &2123578431077793327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6440800555345393958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f124db422f3d41d40a57c249f7d6c6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildScript: {fileID: 0}
+  buildingSpriteRenderer: {fileID: 3827603956207724296}
+  holdTimeRequired: 0.8

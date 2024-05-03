@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SnappingCursor : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class SnappingCursor : MonoBehaviour
 
     void UpdateGraphic()
     {
-        if (buildScript.selectedBuilding != null) //If the build mode is active
+        if (buildScript.selectedBuilding.name != "") //If the build mode is active
         {
             collider.enabled = true;            //Set the collider and sprite to active
             sprite.gameObject.SetActive(true);
@@ -59,8 +60,9 @@ public class SnappingCursor : MonoBehaviour
     
     void OnMouseDown()
     {
-        if (buildScript.selectedBuilding != null)
+        if (buildScript.selectedBuilding.name != "")
         {
+            if (EventSystem.current.IsPointerOverGameObject()) return;
             buildScript.OnCursorDown(); //Active function on the build script when the player clicks
         }
     }

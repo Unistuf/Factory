@@ -26,9 +26,21 @@ public class CrafterUI : MonoBehaviour
     public TextMeshProUGUI processTimeText;
     public RawImage recipeImage;
 
+
+    void Start()
+    {
+        selectedRecipe = new Recipe();
+        selectedRecipe.displayName = "";
+    }
+
+    public void OpenUI(CrafterScript caller)
+    {
+        selectedRecipe = caller.currentRecipe;
+    }
+
     void Update()
     {
-        if (selectedRecipe != null)
+        if (selectedRecipe.displayName != "")
         {
             infoMenu.SetActive(true);
 
@@ -92,11 +104,16 @@ public class CrafterUI : MonoBehaviour
         {
             outputText[i].text = "";
         } 
+
     }
 
     public void ConfirmSelection()
     {
         currentCrafter.currentRecipe = selectedRecipe;
+
+        selectedRecipe = new Recipe();
+        selectedRecipe.displayName = "";
+
         this.gameObject.SetActive(false);
     }
 }

@@ -8,6 +8,7 @@ public class Buildings
 {
     public GameObject prefab;
     public string name;
+    public string buildingType;
 
     public string ingredient1Name;
     public string ingredient2Name;
@@ -36,7 +37,7 @@ public class BuildScript : MonoBehaviour
 
     void Start()
     {
-        selectedBuilding = null; //set the selected building to null on start just in case
+        selectedBuilding.name = "";
     }
 
     public void SelectToBuild(string buildingName) //Checks if the building exists given the name, then selects it
@@ -70,7 +71,12 @@ public class BuildScript : MonoBehaviour
 
             GameObject temp = Instantiate(selectedBuilding.prefab, cursor.snappedMousePosInWorld, transform.rotation); //Spawn prefab
             temp.transform.parent = buildingsParent.transform; //Set the parent to keep the hierarchy tidy
-            temp.GetComponent<CrafterScript>().crafterUI = crafterUI; //Set the crafterUI variable of the crafter so it can function
+            temp.name = selectedBuilding.name;
+
+            if (selectedBuilding.buildingType == "Crafter")
+            {
+                temp.GetComponent<CrafterScript>().crafterUI = crafterUI; //Set the crafterUI variable of the crafter so it can function
+            }
 
             SpawnedBuildings.Add(temp); //Add the spawned building to the list of buildings that has been spawned
         }
@@ -84,7 +90,8 @@ public class BuildScript : MonoBehaviour
 
     public void DisableBuildMode() //Used when closing the build menu to deactive building
     {
-        selectedBuilding = null;
+        selectedBuilding = new Buildings();
+        selectedBuilding.name = "";
     }
 
     public void OnBuildMenuButtonPressed(string buildingName) //Selects the building to be placed when the player clicks it in the build menu
@@ -99,7 +106,7 @@ public class BuildScript : MonoBehaviour
         {
             if (buildings[i].name == buildingName)
             {
-                returnBuilding = buildings[i];
+                    returnBuilding = buildings[i];
             }
         }
 
@@ -113,13 +120,16 @@ public class BuildScript : MonoBehaviour
     {
         for (int i = 0; i < SpawnedBuildings.Count; i++)
         {
-            if (position.x == SpawnedBuildings[i].transform.position.x && position.y == SpawnedBuildings[i].transform.position.y)
+            if (SpawnedBuildings[i] != null)
             {
-                result = true;
-            }
-            else
-            {
-                result = false;
+                if (position.x == SpawnedBuildings[i].transform.position.x && position.y == SpawnedBuildings[i].transform.position.y)
+                {
+                    result = true;
+                }
+                else
+                {
+                   result = false;
+                }
             }
         }
 
@@ -140,5 +150,21 @@ public class BuildScript : MonoBehaviour
         }
 
         return requirementsMet;
+    }
+
+    //                          Destroy Building
+    //-----------------------------------------------------------------------------------------------
+
+    public void DestroyBuilding(GameObject buildingObject)
+    {
+        Buildings building = GetBuilding(buildingObject.name);
+
+        //Refund the building Costs
+        inventory.AddItem(building.ingredient1Name, building.ingredient1Cost);
+        inventory.AddItem(building.ingredient2Name, building.ingredient2Cost);
+
+        //Delete Building from scene
+        Destroy(buildingObject);
+   
     }
 }

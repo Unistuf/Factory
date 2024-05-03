@@ -21,6 +21,9 @@ public class CrafterScript : MonoBehaviour
         inventoryScript = GameObject.Find("Manager").GetComponent<Inventory>();
         buildScript = GameObject.Find("Manager").GetComponent<BuildScript>();
 
+        currentRecipe = new Recipe();
+        currentRecipe.displayName = "";
+
         StartCoroutine(CraftLoop());
     }
 
@@ -29,6 +32,7 @@ public class CrafterScript : MonoBehaviour
         if (buildScript.selectedBuilding != null)
         {
             crafterUI.gameObject.SetActive(true);
+            crafterUI.OpenUI(this);
             crafterUI.currentCrafter = this;
             crafterUI.recipes = recipeOptions;
             crafterUI.selectedRecipe = null;
@@ -39,7 +43,7 @@ public class CrafterScript : MonoBehaviour
 
     IEnumerator CraftLoop() //Creates items based on its craft time and resources
     {
-        if (currentRecipe != null)
+        if (currentRecipe.displayName != "")
         {
             bool CheckReqs = CheckRecipeRequirements(); 
 
