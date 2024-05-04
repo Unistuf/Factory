@@ -43,12 +43,15 @@ public class CrafterScript : MonoBehaviour
 
     IEnumerator CraftLoop() //Creates items based on its craft time and resources
     {
+        Debug.Log("a");
         if (currentRecipe.displayName != "")
         {
+            Debug.Log("B");
             bool CheckReqs = CheckRecipeRequirements(); 
 
             if (CheckReqs) //Check if the player has enough resources
             {
+                Debug.Log("C");
                 CompleteRecipe(); //Craft Item
 
                 yield return new WaitForSeconds(currentRecipe.productionTime); //Wait the production time

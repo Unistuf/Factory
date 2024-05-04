@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7915830620076202195}
   - component: {fileID: 1520247927386335395}
   - component: {fileID: 2123578431077793327}
-  - component: {fileID: 7094724281258580241}
+  - component: {fileID: 2503342749302704876}
   m_Layer: 0
-  m_Name: Crafter
+  m_Name: Chemical Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 91d80437e6e0e794ba97734d9a59d6de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 440caacf9f85b3044aa96c36dd95f9e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   buildScript: {fileID: 0}
   buildingSpriteRenderer: {fileID: 3827603956207724296}
   holdTimeRequired: 0.8
---- !u!95 &7094724281258580241
+--- !u!95 &2503342749302704876
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ Animator:
   m_GameObject: {fileID: 6440800555345393958}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 00d7b824877562d42a493bcf3daa3256, type: 2}
+  m_Controller: {fileID: 9100000, guid: 612fda7a6a450934ca7a7a4cfd744da8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

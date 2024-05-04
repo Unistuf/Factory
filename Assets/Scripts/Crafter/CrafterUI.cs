@@ -35,36 +35,17 @@ public class CrafterUI : MonoBehaviour
 
     public void OpenUI(CrafterScript caller)
     {
-        selectedRecipe = caller.currentRecipe;
+        selectedRecipe = caller.currentRecipe;      
     }
 
     void Update()
     {
-        if (selectedRecipe.displayName != "")
-        {
-            infoMenu.SetActive(true);
 
-            recipeName.text = "" + selectedRecipe.displayName;
-            processTimeText.text = "" + selectedRecipe.productionTime + "s Production time";
-            recipeImage.texture = selectedRecipe.recipeImage;
-
-            for (int i = 0; i < selectedRecipe.inputs.Length; i++)
-            {
-                inputText[i].text = "" + selectedRecipe.inputs[i].amount + " " + selectedRecipe.inputs[i].name;
-            }
-            for (int i = 0; i < selectedRecipe.outputs.Length; i++)
-            {
-                outputText[i].text = "" + selectedRecipe.outputs[i].amount + " " + selectedRecipe.outputs[i].name;
-            }            
-        }
-        else{
-            infoMenu.SetActive(false);
-        }
     }
 
     public void CreateIcons()
     {
-        for (int i = crafterButtons.Count; i > 0; i--)
+        for (int i = 0; i < crafterButtons.Count; i++)
         {
             Destroy(crafterButtons[i].gameObject);
         }
@@ -105,6 +86,20 @@ public class CrafterUI : MonoBehaviour
             outputText[i].text = "";
         } 
 
+        infoMenu.SetActive(true);
+
+        recipeName.text = "" + selectedRecipe.displayName;
+        processTimeText.text = "" + selectedRecipe.productionTime + "s Production time";
+        recipeImage.texture = selectedRecipe.recipeImage;
+
+        for (int i = 0; i < selectedRecipe.inputs.Length; i++)
+        {
+            inputText[i].text = "" + selectedRecipe.inputs[i].amount + " " + selectedRecipe.inputs[i].name;
+        }
+        for (int i = 0; i < selectedRecipe.outputs.Length; i++)
+        {
+            outputText[i].text = "" + selectedRecipe.outputs[i].amount + " " + selectedRecipe.outputs[i].name;
+        }            
     }
 
     public void ConfirmSelection()
@@ -114,6 +109,7 @@ public class CrafterUI : MonoBehaviour
         selectedRecipe = new Recipe();
         selectedRecipe.displayName = "";
 
+        infoMenu.SetActive(false);
         this.gameObject.SetActive(false);
     }
 }
