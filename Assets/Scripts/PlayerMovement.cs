@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector2 moveVector = value.ReadValue<Vector2>();
 
-            Vector2 movement = new Vector2(-moveVector.x, -moveVector.y) * moveSpeed;
+            Vector2 movement = new Vector2(moveVector.x, moveVector.y) * moveSpeed;
             rb.velocity = movement;
         }
         // And reset velocity to zero when we stop inputting
