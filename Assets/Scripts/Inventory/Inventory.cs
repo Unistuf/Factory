@@ -27,6 +27,8 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     public Item[] items;
 
+    public bool showProductionSpeed;
+
 
     public void AddItem(string name, int amount) //Add an amount of items to the inventory given a name (string) and an amount (int)
     {
@@ -63,5 +65,20 @@ public class Inventory : MonoBehaviour
         } 
 
         return returnValue;       
+    }
+    
+    public Texture GetItemImage(string name)
+    {
+        Texture returnValue = null;
+
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (name == items[i].name)
+            {
+                returnValue = items[i].itemImage;
+            }
+        } 
+
+        return returnValue;         
     }
 }

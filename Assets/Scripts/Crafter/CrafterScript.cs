@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class CrafterScript : MonoBehaviour
 {
@@ -15,6 +17,11 @@ public class CrafterScript : MonoBehaviour
     [Header("Runtime")]
     public Recipe currentRecipe;
 
+    [Header("ProductionText")]
+    public GameObject textObject;
+    public TextMeshProUGUI itemText;
+    public RawImage itemImage;
+
 
     void Start()
     {
@@ -25,6 +32,20 @@ public class CrafterScript : MonoBehaviour
         currentRecipe.displayName = "";
 
         StartCoroutine(CraftLoop());
+    }
+
+    void Update()
+    {
+        if (currentRecipe.displayName != "" && inventoryScript.showProductionSpeed)
+        {
+            textObject.SetActive(true);
+
+            itemImage.texture = currentRecipe.recipeImage;
+            itemText.text = "" + (currentRecipe.inputs[0].amount / currentRecipe.productionTime).ToString("#.#") + "/s";
+        }
+        else{
+            textObject.SetActive(false);
+        }
     }
 
     void OnMouseDown() //Opens the crafting Ui when the crafting building is clicked
