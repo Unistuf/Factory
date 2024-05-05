@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Camera camera;
+    public GameObject buildMenu;
 
     void Start()
     {
@@ -33,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnPlayerZoom(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && !buildMenu.activeInHierarchy)
         {
             // Get the scroll input and normalise it to either 1 or -1
             Vector2 inputVector = context.ReadValue<Vector2>();

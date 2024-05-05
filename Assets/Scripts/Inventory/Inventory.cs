@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.InputSystem;
 
 [Serializable]
 public class Item
@@ -29,6 +30,13 @@ public class Inventory : MonoBehaviour
 
     public bool showProductionSpeed;
 
+    public void OnProductionToggle(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            showProductionSpeed = !showProductionSpeed;
+        }        
+    }
 
     public void AddItem(string name, int amount) //Add an amount of items to the inventory given a name (string) and an amount (int)
     {

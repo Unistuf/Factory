@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ProductionSpeedToggle",
+                    "type": "Button",
+                    "id": "b3bfdba1-4c15-4bee-ba03-3573717d545c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -271,6 +280,17 @@
                     "processors": "Normalize(min=-1,max=1)",
                     "groups": "",
                     "action": "Zoom In",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a1e5d76-fedb-451c-ae79-eb8b0ac75005",
+                    "path": "<Keyboard>/alt",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ProductionSpeedToggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

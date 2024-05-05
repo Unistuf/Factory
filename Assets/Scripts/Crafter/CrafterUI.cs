@@ -112,4 +112,10 @@ public class CrafterUI : MonoBehaviour
         infoMenu.SetActive(false);
         this.gameObject.SetActive(false);
     }
+
+    public void CloseUI()
+    {
+        infoMenu.SetActive(false);
+        this.gameObject.SetActive(false);        
+    }
 }
