@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 3092412846419861541}
   - component: {fileID: 3185139116320512021}
   - component: {fileID: 7874461752365536379}
+  - component: {fileID: 4532071643836026547}
   m_Layer: 0
   m_Name: Miner
   m_TagString: Untagged
@@ -150,7 +151,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -253,6 +254,21 @@ MonoBehaviour:
   textObject: {fileID: 7189902690688424395}
   itemText: {fileID: 475387858759853778}
   itemImage: {fileID: 8062969097202058021}
+--- !u!114 &4532071643836026547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6321176901458763995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f124db422f3d41d40a57c249f7d6c6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildScript: {fileID: 0}
+  buildingSpriteRenderer: {fileID: 1524485425525995884}
+  holdTimeRequired: 0.5
 --- !u!1 &6340906134881354015
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,8 +446,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

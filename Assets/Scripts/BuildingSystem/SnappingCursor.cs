@@ -16,6 +16,7 @@ public class SnappingCursor : MonoBehaviour
     public Color cannotPlaceColor;
     public Color canPlaceColor;
 
+
     void Update()
     {
         UpdateMouse();

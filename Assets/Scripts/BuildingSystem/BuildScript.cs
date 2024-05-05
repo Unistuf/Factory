@@ -16,8 +16,6 @@ public class Buildings
     public int ingredient1Cost;
     public int ingredient2Cost;
 
-    public Texture ingredient1Image;
-    public Texture ingredient2Image;
 }
 
 public class BuildScript : MonoBehaviour
@@ -59,11 +57,18 @@ public class BuildScript : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+    }
+
+    bool canBuildReqs;
+    bool canBuildPos;
+
     public void Build()
     {
-        bool canBuildReqs = CheckBuildRequirements(selectedBuilding); //Check if the player has enough items to build
+        canBuildReqs = CheckBuildRequirements(selectedBuilding); //Check if the player has enough items to build
 
-        bool canBuildPos = !CheckPositionForBuilding(new Vector2(cursor.snappedMousePosInWorld.x, cursor.snappedMousePosInWorld.y)); //Check if theres already a building in the attempted place
+        canBuildPos = !CheckPositionForBuilding(new Vector2(cursor.snappedMousePosInWorld.x, cursor.snappedMousePosInWorld.y)); //Check if theres already a building in the attempted place
 
         if (canBuildReqs && canBuildPos && selectedBuilding != null) //If all of the above are okay, proceed
         {   
@@ -118,6 +123,8 @@ public class BuildScript : MonoBehaviour
     bool result;
     public bool CheckPositionForBuilding(Vector2 position) //Check if the position has a building in it already
     {
+        result = false;
+
         for (int i = 0; i < SpawnedBuildings.Count; i++)
         {
             if (SpawnedBuildings[i] != null)
@@ -125,10 +132,6 @@ public class BuildScript : MonoBehaviour
                 if (position.x == SpawnedBuildings[i].transform.position.x && position.y == SpawnedBuildings[i].transform.position.y)
                 {
                     result = true;
-                }
-                else
-                {
-                   result = false;
                 }
             }
         }
@@ -164,7 +167,6 @@ public class BuildScript : MonoBehaviour
         inventory.AddItem(building.ingredient2Name, building.ingredient2Cost);
 
         //Delete Building from scene
-        Destroy(buildingObject);
-   
+        Destroy(buildingObject);  
     }
 }

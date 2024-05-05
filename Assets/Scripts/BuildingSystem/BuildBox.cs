@@ -25,8 +25,8 @@ public class BuildBox : MonoBehaviour
 
         nameText.text = "" + thisBuilding.name;
 
-        ingredient1Image.texture = thisBuilding.ingredient1Image;
-        ingredient2Image.texture = thisBuilding.ingredient2Image;
+        ingredient1Image.texture = inventory.GetItemImage(thisBuilding.ingredient1Name);
+        ingredient2Image.texture = inventory.GetItemImage(thisBuilding.ingredient2Name);
     }
 
     void Update()

@@ -493,7 +493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildScript: {fileID: 0}
   buildingSpriteRenderer: {fileID: 3827603956207724296}
-  holdTimeRequired: 0.8
+  holdTimeRequired: 0.5
 --- !u!95 &3223783278202647906
 Animator:
   serializedVersion: 5
