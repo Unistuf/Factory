@@ -59,6 +59,7 @@ public class BuildScript : MonoBehaviour
 
     void Update()
     {
+        
     }
 
     bool canBuildReqs;

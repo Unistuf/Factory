@@ -36,7 +36,7 @@ public class MinerScript : MonoBehaviour
 
     void Update()
     {
-        if (currentResource != "" && inventory.showProductionSpeed)
+        if (IsResourceAllowed(currentResource) && inventory.showProductionSpeed)
         {
             textObject.SetActive(true);
 

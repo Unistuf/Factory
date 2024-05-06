@@ -41,7 +41,7 @@ public class CrafterScript : MonoBehaviour
             textObject.SetActive(true);
 
             itemImage.texture = currentRecipe.recipeImage;
-            itemText.text = "" + (currentRecipe.inputs[0].amount / currentRecipe.productionTime).ToString("#.#") + "/s";
+            itemText.text = "" + (currentRecipe.outputs[0].amount / currentRecipe.productionTime).ToString("#.#") + "/s";
         }
         else{
             textObject.SetActive(false);

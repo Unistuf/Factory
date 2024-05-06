@@ -459,17 +459,68 @@ MonoBehaviour:
   crafterUI: {fileID: 0}
   buildScript: {fileID: 0}
   recipeOptions:
+  - displayName: Nuclear Processing
+    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    inputs:
+    - itemImage: {fileID: 0}
+      name: Uranium
+      amount: 5
+    outputs:
+    - itemImage: {fileID: 0}
+      name: Depleted Uranium
+      amount: 5
+    productionTime: 5
   - displayName: Metal Processing
     recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
     inputs:
     - itemImage: {fileID: 0}
       name: Raw Metal
-      amount: 10
+      amount: 8
+    - itemImage: {fileID: 0}
+      name: Depleted Uranium
+      amount: 1
     outputs:
     - itemImage: {fileID: 0}
       name: Machined Metal
       amount: 1
-    productionTime: 4
+    productionTime: 1
+  - displayName: Scrap Processing
+    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    inputs:
+    - itemImage: {fileID: 0}
+      name: Electronic Scrap
+      amount: 10
+    - itemImage: {fileID: 0}
+      name: Depleted Uranium
+      amount: 1
+    outputs:
+    - itemImage: {fileID: 0}
+      name: Electronic Cable
+      amount: 3
+    productionTime: 2
+  - displayName: Fluid Processing
+    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    inputs:
+    - itemImage: {fileID: 0}
+      name: Water
+      amount: 10
+    - itemImage: {fileID: 0}
+      name: Lithium
+      amount: 10
+    - itemImage: {fileID: 0}
+      name: Circuit Board
+      amount: 1
+    - itemImage: {fileID: 0}
+      name: Depleted Uranium
+      amount: 1
+    outputs:
+    - itemImage: {fileID: 0}
+      name: Hydraulic Fluid
+      amount: 10
+    - itemImage: {fileID: 0}
+      name: 'Water '
+      amount: 1
+    productionTime: 2
   currentRecipe:
     displayName: 
     recipeImage: {fileID: 0}

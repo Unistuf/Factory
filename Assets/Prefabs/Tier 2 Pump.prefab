@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 7874461752365536379}
   - component: {fileID: 4532071643836026547}
   m_Layer: 0
-  m_Name: Miner
+  m_Name: Tier 2 Pump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,8 +246,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowedResources:
-  - Raw Metal
-  productionSpeed: 1
+  - Water
+  productionSpeed: 0.6
   productionAmount: 1
   inventory: {fileID: 0}
   currentResource: 

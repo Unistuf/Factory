@@ -18,12 +18,10 @@ public class InventoryDisplay : MonoBehaviour
 
     IEnumerator RefreshInventory()
     {
-        for (int i = spawnedBoxes.Count; i > 0; i--)
+        for (int i = 0; i < spawnedBoxes.Count; i++)
         {
-            Destroy(spawnedBoxes[0].gameObject);
-            spawnedBoxes.RemoveAt(0);
+            Destroy(spawnedBoxes[i].gameObject);
         }
-
         spawnedBoxes = new List<InventoryBox>();
 
         int x = 0;

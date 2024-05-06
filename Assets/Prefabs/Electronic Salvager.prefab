@@ -387,15 +387,29 @@ MonoBehaviour:
   crafterUI: {fileID: 0}
   buildScript: {fileID: 0}
   recipeOptions:
-  - displayName: Metal Processing
+  - displayName: Scrap Processing
     recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
     inputs:
     - itemImage: {fileID: 0}
-      name: Raw Metal
+      name: Electronic Scrap
       amount: 10
     outputs:
     - itemImage: {fileID: 0}
+      name: Electronic Cable
+      amount: 3
+    productionTime: 5
+  - displayName: Circuitry
+    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    inputs:
+    - itemImage: {fileID: 0}
+      name: Electronic Cable
+      amount: 2
+    - itemImage: {fileID: 0}
       name: Machined Metal
+      amount: 1
+    outputs:
+    - itemImage: {fileID: 0}
+      name: Circuit Board
       amount: 1
     productionTime: 4
   currentRecipe:

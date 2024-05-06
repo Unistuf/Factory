@@ -464,12 +464,26 @@ MonoBehaviour:
     inputs:
     - itemImage: {fileID: 0}
       name: Raw Metal
-      amount: 10
+      amount: 8
     outputs:
     - itemImage: {fileID: 0}
       name: Machined Metal
       amount: 1
     productionTime: 4
+  - displayName: Mechanics
+    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    inputs:
+    - itemImage: {fileID: 0}
+      name: Machined Metal
+      amount: 5
+    - itemImage: {fileID: 0}
+      name: Water
+      amount: 15
+    outputs:
+    - itemImage: {fileID: 0}
+      name: Mechanical Parts
+      amount: 1
+    productionTime: 6
   currentRecipe:
     displayName: 
     recipeImage: {fileID: 0}

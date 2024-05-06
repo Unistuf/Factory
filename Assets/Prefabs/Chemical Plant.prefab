@@ -459,17 +459,57 @@ MonoBehaviour:
   crafterUI: {fileID: 0}
   buildScript: {fileID: 0}
   recipeOptions:
-  - displayName: Metal Processing
+  - displayName: Batteries
     recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
     inputs:
     - itemImage: {fileID: 0}
-      name: Raw Metal
-      amount: 10
+      name: Lithium
+      amount: 15
+    - itemImage: {fileID: 0}
+      name: Electronic Cable
+      amount: 2
     outputs:
     - itemImage: {fileID: 0}
-      name: Machined Metal
+      name: Battery
+      amount: 2
+    productionTime: 8
+  - displayName: Fluid Processing
+    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    inputs:
+    - itemImage: {fileID: 0}
+      name: Water
+      amount: 10
+    - itemImage: {fileID: 0}
+      name: Lithium
+      amount: 10
+    - itemImage: {fileID: 0}
+      name: Circuit Board
       amount: 1
-    productionTime: 4
+    outputs:
+    - itemImage: {fileID: 0}
+      name: Hydraulic Fluid
+      amount: 10
+    - itemImage: {fileID: 0}
+      name: 'Water '
+      amount: 1
+    productionTime: 10
+  - displayName: Robotic Parts
+    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    inputs:
+    - itemImage: {fileID: 0}
+      name: Mechanical Parts
+      amount: 15
+    - itemImage: {fileID: 0}
+      name: Hydraulic Fluid
+      amount: 25
+    - itemImage: {fileID: 0}
+      name: Circuit Board
+      amount: 5
+    outputs:
+    - itemImage: {fileID: 0}
+      name: Robotic Parts
+      amount: 2
+    productionTime: 10
   currentRecipe:
     displayName: 
     recipeImage: {fileID: 0}
