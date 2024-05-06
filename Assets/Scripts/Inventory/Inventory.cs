@@ -25,6 +25,7 @@ public class Recipe
 
 public class Inventory : MonoBehaviour
 {
+    public bool Debug_CreativeMode;
     [SerializeField]
     public Item[] items;
 
@@ -66,7 +67,11 @@ public class Inventory : MonoBehaviour
 
         for (int i = 0; i < items.Length; i++)
         {
-            if (name == items[i].name)
+            if (Debug_CreativeMode)
+            {
+                returnValue = 99999;
+            }
+            else if (name == items[i].name)
             {
                 returnValue = items[i].amount;
             }
