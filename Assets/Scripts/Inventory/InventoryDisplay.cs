@@ -20,17 +20,17 @@ public class InventoryDisplay : MonoBehaviour
     {
         for (int i = 0; i < spawnedBoxes.Count; i++)
         {
-            Destroy(spawnedBoxes[i].gameObject);
+            Destroy(spawnedBoxes[i].gameObject); //Deletes all boxes
         }
-        spawnedBoxes = new List<InventoryBox>();
+        spawnedBoxes = new List<InventoryBox>(); //Resets the list
 
         int x = 0;
         int y = 0;
         int amountInRow = 8;
 
-        for (int i = 0; i < inventory.items.Length; i++)
+        for (int i = 0; i < inventory.items.Length; i++) 
         {
-            if (inventory.items[i].amount > 0)
+            if (inventory.items[i].amount > 0) //If the current item index has more than 0 items then spawn the box in the inventory to show amounts
             {
                 InventoryBox temp = Instantiate(inventoryBoxPrefab, new Vector3(inventoryBoxSpawnPos.position.x + (135 * x), inventoryBoxSpawnPos.position.y + (-175 * y), 0), transform.rotation).GetComponent<InventoryBox>();
                 temp.gameObject.transform.parent = inventoryBoxSpawnPos;
@@ -38,7 +38,7 @@ public class InventoryDisplay : MonoBehaviour
                 temp.item = inventory.items[i];
 
                 x += 1;
-                if (x >= amountInRow)
+                if (x >= amountInRow) //Progress the row
                 {
                     x = 0;
                     y += 1;

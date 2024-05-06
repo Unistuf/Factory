@@ -20,9 +20,9 @@ public class MinerScript : MonoBehaviour
     public TextMeshProUGUI itemText;
     public RawImage itemImage;    
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) 
     {
-        if (other.gameObject.tag == "Resource")
+        if (other.gameObject.tag == "Resource") //Gets the resource tile below it and set it as the current mining resource
         {
             currentResource = other.gameObject.name;
         }
@@ -36,12 +36,12 @@ public class MinerScript : MonoBehaviour
 
     void Update()
     {
-        if (IsResourceAllowed(currentResource) && inventory.showProductionSpeed)
+        if (IsResourceAllowed(currentResource) && inventory.showProductionSpeed) //If production display is turned on and the current resource is one that this machine can produce
         {
-            textObject.SetActive(true);
+            textObject.SetActive(true); //turn on the mining display object
 
-            itemImage.texture = inventory.GetItemImage(currentResource);
-            itemText.text = "" + (productionAmount / productionSpeed).ToString("#.#") + "/s";
+            itemImage.texture = inventory.GetItemImage(currentResource); //Set the image to the current resource
+            itemText.text = "" + (productionAmount / productionSpeed).ToString("#.##") + "/s"; //Show the amount per second
         }
         else{
             textObject.SetActive(false);
@@ -50,16 +50,16 @@ public class MinerScript : MonoBehaviour
 
     IEnumerator ProductionLoop()
     {
-        if (IsResourceAllowed(currentResource))
+        if (IsResourceAllowed(currentResource)) //if the resource is in the allowed list
         {
-            inventory.AddItem(currentResource, productionAmount);
+            inventory.AddItem(currentResource, productionAmount); //Add item to inventory
         }
 
-        yield return new WaitForSeconds(productionSpeed);
+        yield return new WaitForSeconds(productionSpeed); //Wait out the production speed
         StartCoroutine(ProductionLoop());
     }
 
-    bool IsResourceAllowed(string name)
+    bool IsResourceAllowed(string name) //Checks if the resource is in the list of minable resources for this machine
     {
         bool result = false;
 

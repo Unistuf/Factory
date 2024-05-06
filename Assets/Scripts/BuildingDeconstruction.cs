@@ -17,36 +17,33 @@ public class BuildingDeconstruction : MonoBehaviour
         buildScript = FindObjectOfType<BuildScript>().GetComponent<BuildScript>();
     }
 
-    void Update()
-    {
-
-    }
-
     void OnMouseOver()
     {
-        HoldCheck();
+        HoldCheck(); 
     }
 
     void Deconstruct()
     {
-        buildScript.DestroyBuilding(this.gameObject);
+        buildScript.DestroyBuilding(this.gameObject); //Asks the build manager to destroy this building
     }
 
 
     void HoldCheck()
     {
+        //Starts the hold timer
         if (Input.GetMouseButtonDown(1))
         {
             heldTimeLeft = holdTimeRequired;
         }
 
-   
+        //Checks if the right mouse button is held
         if (Input.GetMouseButton(1))
         {
             heldTimeLeft -= Time.deltaTime;
 
-            buildingSpriteRenderer.color = new Color(1, 0 + (heldTimeLeft / holdTimeRequired), 0 + (heldTimeLeft / holdTimeRequired));
+            buildingSpriteRenderer.color = new Color(1, 0 + (heldTimeLeft / holdTimeRequired), 0 + (heldTimeLeft / holdTimeRequired)); //Makes the building more red the longer its been held
 
+            //Checks if the right mouse button has been held long enough
             if (heldTimeLeft <= 0)
             {
                 Deconstruct();
@@ -55,12 +52,12 @@ public class BuildingDeconstruction : MonoBehaviour
 
         if (Input.GetMouseButtonUp(1))
         {
-            buildingSpriteRenderer.color = Color.white;
+            buildingSpriteRenderer.color = Color.white; //Resets to white if the player releases the right mouse button
         }
     }
 
     void OnMouseExit()
     {
-        buildingSpriteRenderer.color = Color.white;
+        buildingSpriteRenderer.color = Color.white;//Resets to white if the player move the cursor away
     }
 }

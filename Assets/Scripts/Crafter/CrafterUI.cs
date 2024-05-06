@@ -38,12 +38,7 @@ public class CrafterUI : MonoBehaviour
         selectedRecipe = caller.currentRecipe;      
     }
 
-    void Update()
-    {
-
-    }
-
-    public void CreateIcons()
+    public void CreateIcons() //Creates the icons based off the current selected recipe to allow the player to select them, uses similar logic to InventoryDisplay.cs
     {
         for (int i = 0; i < crafterButtons.Count; i++)
         {
@@ -73,36 +68,38 @@ public class CrafterUI : MonoBehaviour
         }
     }
 
-    public void SelectButton(int number)
+    public void SelectButton(int number) //called using an index supplied to the crafterUiButtons when they are created, used for showing info about the recipe
     {
         selectedRecipe = recipes[number];
 
-        for (int i = 0; i < inputText.Length; i++)
+        for (int i = 0; i < inputText.Length; i++) //Resets input texts
         {
             inputText[i].text = "";
         }
-        for (int i = 0; i < outputText.Length; i++)
+        for (int i = 0; i < outputText.Length; i++) //Resets output texts
         {
             outputText[i].text = "";
         } 
 
-        infoMenu.SetActive(true);
+        infoMenu.SetActive(true); //Set the info menu to active
 
+
+        //Update Text elements
         recipeName.text = "" + selectedRecipe.displayName;
         processTimeText.text = "" + selectedRecipe.productionTime + "s Production time";
         recipeImage.texture = selectedRecipe.recipeImage;
 
-        for (int i = 0; i < selectedRecipe.inputs.Length; i++)
+        for (int i = 0; i < selectedRecipe.inputs.Length; i++) //Update Input texts
         {
             inputText[i].text = "" + selectedRecipe.inputs[i].amount + " " + selectedRecipe.inputs[i].name;
         }
-        for (int i = 0; i < selectedRecipe.outputs.Length; i++)
+        for (int i = 0; i < selectedRecipe.outputs.Length; i++) //Update output Texts
         {
             outputText[i].text = "" + selectedRecipe.outputs[i].amount + " " + selectedRecipe.outputs[i].name;
         }            
     }
 
-    public void ConfirmSelection()
+    public void ConfirmSelection() //Adds the recipe to the crafter when confirmed
     {
         currentCrafter.currentRecipe = selectedRecipe;
 
