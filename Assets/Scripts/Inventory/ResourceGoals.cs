@@ -30,6 +30,7 @@ public class ResourceGoals : MonoBehaviour
         StartCoroutine(CheckGoalsLoop());
     }
 
+
     public void LoadItemGoals(int tier)
     {
         // Clear previous goals
@@ -38,6 +39,7 @@ public class ResourceGoals : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        // Then gather the goals for the current tier, looping through the items for that tier
         for (int i = 0; i <= tierGoals[currentTier].requirements.Length - 1; i++)
         {
             UnityEngine.UI.RawImage newGoalImage = Instantiate(resourceGoalImagePrefab, UIParent.transform);
@@ -49,30 +51,33 @@ public class ResourceGoals : MonoBehaviour
     public IEnumerator CheckGoalsLoop()
     {
         yield return new WaitForSeconds(2);
-
+        
+        // Start a counter to check how many resources we've fulfilled
         int fulfilledItems = 0;
 
         LoadItemGoals(currentTier);
 
+        // Loop through our requirements and check them against our actual inventory amounts
         foreach (Item item in tierGoals[currentTier].requirements)
         {
+            // And if we meet it, tick the counter up and debug log that we have fulfilled the goal
             if (item.amount < inventory.GetItem(item.name))
             {
                 fulfilledItems++;
                 Debug.Log($"{item.name} fulfilled, {fulfilledItems} total, {tierGoals[currentTier].requirements.Length - fulfilledItems} remaining");
             }
 
-            if (fulfilledItems == tierGoals[currentTier].requirements.Length)
+            // And if we fulfil all goals, unlock the next tier
+            if (fulfilledItems == tierGoals[currentTier].requirements.Length && currentTier <= 4)
             {
-                currentTier++;
+                    Instantiate(tierGoals[currentTier].areaUnlocked);
 
-                Debug.Log(currentTier);
-
-                Debug.Log($"Tier {currentTier} unlocked!");
-                //Instantiate(tierGoals[currentTier].areaUnlocked);
+                    currentTier++;
+                    Debug.Log($"Tier {currentTier} unlocked!");
             }
         }
         
+        // Then loop and check every few seconds
         StartCoroutine(CheckGoalsLoop());
     }
 }
