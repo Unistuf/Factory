@@ -2,21 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using TMPro.EditorUtilities;
+using UnityEditor.Build.Content;
 using UnityEngine;
+
+[System.Serializable]
+public class TierGoals
+{
+    public Item[] requirements;
+    public GameObject areaUnlocked;
+}
 
 public class ResourceGoals : MonoBehaviour
 {
     [SerializeField] int currentTier;
-    [SerializeField] Item[] tier0Goals;
-    [SerializeField] Item[] tier1Goals;
-    [SerializeField] Item[] tier2Goals;
-    [SerializeField] Item[] tier3Goals;
-    [SerializeField] Item[] tier4Goals;
-    [SerializeField] UnityEngine.UI.Image resourceGoalImagePrefab;
+    [SerializeField] UnityEngine.UI.RawImage resourceGoalImagePrefab;
+
+    [SerializeField] TierGoals[] tierGoals;
 
     [SerializeField] Inventory inventory;
     [SerializeField] GameObject UIParent;
-
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +28,6 @@ public class ResourceGoals : MonoBehaviour
         LoadItemGoals(currentTier);
 
         StartCoroutine(CheckGoalsLoop());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
     }
 
     public void LoadItemGoals(int tier)
@@ -41,116 +38,41 @@ public class ResourceGoals : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        switch (tier)
+        for (int i = 0; i <= tierGoals[currentTier].requirements.Length - 1; i++)
         {
-            case 0:
-                for (int i = 0; i <= tier0Goals.Length - 1; i++)
-                {
-                    UnityEngine.UI.Image newGoalImage = Instantiate(resourceGoalImagePrefab, UIParent.transform);
-                    //resourceGoalImageList[i].sprite = tier0Goals[i].itemImage;
-                    newGoalImage.GetComponentInChildren<TextMeshProUGUI>().SetText($"{tier0Goals[i].name}\n{inventory.GetItem(tier0Goals[i].name)} / {tier0Goals[i].amount}");
-                }
-                break;        
-            case 1:
-                for (int i = 0; i <= tier1Goals.Length - 1; i++)
-                {
-                    UnityEngine.UI.Image newGoalImage = Instantiate(resourceGoalImagePrefab, UIParent.transform);
-                    //resourceGoalImageList[i].sprite = tier1Goals[i].itemImage;
-                    newGoalImage.GetComponentInChildren<TextMeshProUGUI>().SetText($"{tier1Goals[i].name}\n{inventory.GetItem(tier1Goals[i].name)} / {tier1Goals[i].amount}");
-                }
-                break;
-            case 2:
-                for (int i = 0; i <= tier2Goals.Length - 1; i++)
-                {
-                    UnityEngine.UI.Image newGoalImage = Instantiate(resourceGoalImagePrefab, UIParent.transform);
-                    //resourceGoalImageList[i].sprite = tier2Goals[i].itemImage;
-                    newGoalImage.GetComponentInChildren<TextMeshProUGUI>().SetText($"{tier2Goals[i].name}\n{inventory.GetItem(tier2Goals[i].name)} / {tier2Goals[i].amount}");
-                }
-                break;
-            case 3:
-                for (int i = 0; i <= tier3Goals.Length - 1; i++)
-                {
-                    UnityEngine.UI.Image newGoalImage = Instantiate(resourceGoalImagePrefab, UIParent.transform);
-                    //resourceGoalImageList[i].sprite = tier3Goals[i].itemImage;
-                    newGoalImage.GetComponentInChildren<TextMeshProUGUI>().SetText($"{tier3Goals[i].name}\n{inventory.GetItem(tier3Goals[i].name)} / {tier3Goals[i].amount}");
-                }
-                break;
-            case 4:
-                for (int i = 0; i <= tier4Goals.Length - 1; i++)
-                {
-                    UnityEngine.UI.Image newGoalImage = Instantiate(resourceGoalImagePrefab, UIParent.transform);
-                    //resourceGoalImageList[i].sprite = tier4Goals[i].itemImage;
-                    newGoalImage.GetComponentInChildren<TextMeshProUGUI>().SetText($"{tier4Goals[i].name}\n{inventory.GetItem(tier4Goals[i].name)} / {tier4Goals[i].amount}");
-                }
-                break;
+            UnityEngine.UI.RawImage newGoalImage = Instantiate(resourceGoalImagePrefab, UIParent.transform);
+            newGoalImage.texture = inventory.GetItemImage(tierGoals[currentTier].requirements[i].name);
+            newGoalImage.GetComponentInChildren<TextMeshProUGUI>().SetText($"{tierGoals[currentTier].requirements[i].name}\n{inventory.GetItem(tierGoals[currentTier].requirements[i].name)} / {tierGoals[currentTier].requirements[i].amount}");
         }
     }
 
     public IEnumerator CheckGoalsLoop()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
+
+        int fulfilledItems = 0;
 
         LoadItemGoals(currentTier);
 
-        switch (currentTier)
+        foreach (Item item in tierGoals[currentTier].requirements)
         {
-            case 0:
-                foreach (Item item in tier0Goals)
-                {
-                    if (item.amount < inventory.GetItem(item.name))
-                    {
-                        Debug.Log($"{item.name} fulfilled");
+            if (item.amount < inventory.GetItem(item.name))
+            {
+                fulfilledItems++;
+                Debug.Log($"{item.name} fulfilled, {fulfilledItems} total, {tierGoals[currentTier].requirements.Length - fulfilledItems} remaining");
+            }
 
-                        // Code to unlock this tier goes here
-                    }
-                }
-                break;            
-            case 1:
-                foreach (Item item in tier1Goals)
-                {
-                    if (item.amount < inventory.GetItem(item.name))
-                    {
-                        Debug.Log($"{item.name} fulfilled");
+            if (fulfilledItems == tierGoals[currentTier].requirements.Length)
+            {
+                currentTier++;
 
-                        // Code to unlock this tier goes here
-                    }
-                }
-                break;            
-            case 2:
-                foreach (Item item in tier2Goals)
-                {
-                    if (item.amount < inventory.GetItem(item.name))
-                    {
-                        Debug.Log($"{item.name} fulfilled");
+                Debug.Log(currentTier);
 
-                        // Code to unlock this tier goes here
-                    }
-                }
-                break;            
-            case 3:
-                foreach (Item item in tier3Goals)
-                {
-                    if (item.amount < inventory.GetItem(item.name))
-                    {
-                        Debug.Log($"{item.name} fulfilled");
-
-                        // Code to unlock this tier goes here
-                    }
-                }
-                break;            
-            case 4:
-                foreach (Item item in tier4Goals)
-                {
-                    if (item.amount < inventory.GetItem(item.name))
-                    {
-                        Debug.Log($"{item.name} fulfilled");
-
-                        // Code to unlock this tier goes here
-                    }
-                }
-            break;
+                Debug.Log($"Tier {currentTier} unlocked!");
+                //Instantiate(tierGoals[currentTier].areaUnlocked);
+            }
         }
-
+        
         StartCoroutine(CheckGoalsLoop());
     }
 }
