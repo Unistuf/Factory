@@ -31,16 +31,13 @@ public class SnappingCursor : MonoBehaviour
             collider.enabled = true;            //Set the collider and sprite to active
             sprite.gameObject.SetActive(true);
 
-            if (snappedMousePosInWorld.x % 2 == 0 && snappedMousePosInWorld.y % 2 == 0)
+            if (buildScript.CheckBuildRequirements(buildScript.selectedBuilding) && !buildScript.CheckPositionForBuilding(new Vector2(snappedMousePosInWorld.x, snappedMousePosInWorld.y))) //Check if the building can be place
             {
-                if (buildScript.CheckBuildRequirements(buildScript.selectedBuilding) && !buildScript.CheckPositionForBuilding(new Vector2(snappedMousePosInWorld.x, snappedMousePosInWorld.y))) //Check if the building can be place
-                {
-                    sprite.color = canPlaceColor; //Set the color to a blue if it can
-                }
-                else
-                {
-                    sprite.color = cannotPlaceColor; //Set the color to a red if it can
-                }
+                sprite.color = canPlaceColor; //Set the color to a blue if it can
+            }
+            else
+            {
+                sprite.color = cannotPlaceColor; //Set the color to a red if it can
             }
         }
         else{ //If the build mode is not active
