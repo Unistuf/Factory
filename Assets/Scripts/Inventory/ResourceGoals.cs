@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using TMPro.EditorUtilities;
-using UnityEditor.Build.Content;
+//using TMPro.EditorUtilities;
+//using UnityEditor.Build.Content;
 using UnityEngine;
 
 [System.Serializable]
