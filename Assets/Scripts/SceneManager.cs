@@ -51,11 +51,21 @@ public class SceneManagerer : MonoBehaviour
             }
         }
 
+
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
-        LoadSettings();
+        if (PlayerPrefs.HasKey("ResolutionWidth"))
+        {
+            LoadSettings();
+        }
+        else
+        {
+            SetResolution(0);
+        }
+
+
     }
 
     public void SetResolution(int resolutionIndex)
@@ -85,8 +95,6 @@ public class SceneManagerer : MonoBehaviour
 
     public void LoadGameObject(GameObject item)
     {
-
-
         if (displayToggle.isOn == true)
         {
             item.SetActive(true);
