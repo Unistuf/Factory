@@ -5,14 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using TMPro;
-using System.Diagnostics.Tracing;
 
 public class SceneManagerer : MonoBehaviour
 {
 
     [SerializeField] private TMP_Dropdown resolutionDropdown;
     [SerializeField] Toggle fsToggle;
-    [SerializeField] Toggle displayToggle;
 
     private Resolution[] resolution;
     private List<Resolution> filteredResolutions;
@@ -20,7 +18,36 @@ public class SceneManagerer : MonoBehaviour
     private float currentRefreshRate;
     private int currentResolutionIndex = 0;
 
-    public int currentDropDown;
+    public GameObject loadingScreen;
+    public Image loadingBarFill;
+
+    public void LoadSceneByInt(int sceneId)
+    {
+        StartCoroutine(LoadSceneAsync(sceneId));
+
+        // SceneManager.LoadScene(sceneId);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    IEnumerator LoadSceneAsync(int sceneId)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneId);
+
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progressValue = Mathf.Clamp01(operation.progress / .9f);
+
+            loadingBarFill.fillAmount = progressValue;
+
+                yield return null;
+        }
+    }
 
     void Start()
     {
@@ -73,21 +100,13 @@ public class SceneManagerer : MonoBehaviour
     {
         Screen.fullScreenMode = fsToggle.isOn ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
 
-        if (fsToggle == false)
-        {
-            LoadSettings();
-        }
-
-
         PlayerPrefs.SetInt("fullscreenMode", fsToggle.isOn ? 1 : 3);
         PlayerPrefs.Save();
     }
 
     public void LoadGameObject(GameObject item)
     {
-
-
-        if (displayToggle.isOn == true)
+        if (fsToggle.isOn == false)
         {
             item.SetActive(true);
         }
@@ -100,7 +119,7 @@ public class SceneManagerer : MonoBehaviour
     void LoadSettings()
     {
         fsToggle.isOn = PlayerPrefs.GetInt("fullscreenMode") == 1;
-        Screen.SetResolution((int)PlayerPrefs.GetFloat("ResolutionWidth"), (int)PlayerPrefs.GetFloat("ResolutionHeight"), fsToggle.isOn);
+        // Screen.SetResolution((int)PlayerPrefs.GetFloat("ResolutionWidth"), (int)PlayerPrefs.GetFloat("ResolutionHeight"), fsToggle.isOn);
     }
 
     public void SelectedButton(GameObject button)
