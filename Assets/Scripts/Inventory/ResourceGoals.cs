@@ -50,7 +50,7 @@ public class ResourceGoals : MonoBehaviour
 
     public IEnumerator CheckGoalsLoop()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.1f);
         
         // Start a counter to check how many resources we've fulfilled
         int fulfilledItems = 0;

@@ -460,7 +460,7 @@ MonoBehaviour:
   buildScript: {fileID: 0}
   recipeOptions:
   - displayName: Nuclear Processing
-    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    recipeImage: {fileID: 2800000, guid: 807ecbfeaec0b3f43a09f0b04a00dd85, type: 3}
     inputs:
     - itemImage: {fileID: 0}
       name: Uranium
@@ -471,7 +471,7 @@ MonoBehaviour:
       amount: 5
     productionTime: 5
   - displayName: Metal Processing
-    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    recipeImage: {fileID: 2800000, guid: 2fe173780b5cb3f488cc8b858946c2bb, type: 3}
     inputs:
     - itemImage: {fileID: 0}
       name: Raw Metal
@@ -485,7 +485,7 @@ MonoBehaviour:
       amount: 1
     productionTime: 1
   - displayName: Scrap Processing
-    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    recipeImage: {fileID: 2800000, guid: 6b83a678fa9875d4c8ae44a267a4779d, type: 3}
     inputs:
     - itemImage: {fileID: 0}
       name: Electronic Scrap
@@ -499,7 +499,7 @@ MonoBehaviour:
       amount: 3
     productionTime: 2
   - displayName: Fluid Processing
-    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    recipeImage: {fileID: 2800000, guid: 27eaa2c57d71a414388142d5b0b3eebd, type: 3}
     inputs:
     - itemImage: {fileID: 0}
       name: Water

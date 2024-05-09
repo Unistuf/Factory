@@ -3842,22 +3842,28 @@ MonoBehaviour:
     areaUnlocked: {fileID: 9201726725812429418, guid: 4f7b0dd09b95f50468a6d68e307e166e, type: 3}
   - requirements:
     - itemImage: {fileID: 0}
-      name: Lithium
-      amount: 50
+      name: Water
+      amount: 100
+    - itemImage: {fileID: 0}
+      name: Mechanical Parts
+      amount: 35
     areaUnlocked: {fileID: 7831412069142542988, guid: dc514d10169980e4393caa97e62d8c1a, type: 3}
   - requirements:
     - itemImage: {fileID: 0}
-      name: Machined Metal
-      amount: 50
+      name: Circuit Board
+      amount: 20
     areaUnlocked: {fileID: 3680970275836490001, guid: 6a7593c8e2a5d664ba64b12124a0a652, type: 3}
   - requirements:
     - itemImage: {fileID: 0}
-      name: Machined Metal
+      name: Circuit Board
       amount: 50
+    - itemImage: {fileID: 0}
+      name: Battery
+      amount: 10
     areaUnlocked: {fileID: 7343749777666580987, guid: d128d5612c9cb53428e7f358fc2df7f4, type: 3}
   - requirements:
     - itemImage: {fileID: 0}
-      name: Machined Metal
+      name: Uranium
       amount: 50
     areaUnlocked: {fileID: 8269400062377570317, guid: 781c608021858db4ba90ccb910a7d09b, type: 3}
   inventory: {fileID: 1041300399}

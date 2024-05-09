@@ -434,7 +434,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
   buildScript: {fileID: 0}
   recipeOptions:
   - displayName: Metal Processing
-    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    recipeImage: {fileID: 2800000, guid: 170921e64e714204d8354bd5366f57e5, type: 3}
     inputs:
     - itemImage: {fileID: 0}
       name: Raw Metal
@@ -471,7 +471,7 @@ MonoBehaviour:
       amount: 1
     productionTime: 4
   - displayName: Mechanics
-    recipeImage: {fileID: 2800000, guid: 3be72fd2e4728ab4faa71b128c7b7c30, type: 3}
+    recipeImage: {fileID: 2800000, guid: 01f6fe6dae22cb44bb35a3169cea420c, type: 3}
     inputs:
     - itemImage: {fileID: 0}
       name: Machined Metal

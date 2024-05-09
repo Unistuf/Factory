@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 3629560484478848405}
   - component: {fileID: 4448565043093212509}
   m_Layer: 2
-  m_Name: Raw Metal
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ Transform:
   m_GameObject: {fileID: 1107682962755312214}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.18, y: -8.01, z: 0}
+  m_LocalPosition: {x: 16.478, y: -8.01, z: 0}
   m_LocalScale: {x: 1.6, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 1138467190891585389}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.7, y: 4.48, z: 0}
+  m_LocalPosition: {x: 13.998, y: 4.48, z: 0}
   m_LocalScale: {x: 0.8, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -226,7 +226,7 @@ Transform:
   m_GameObject: {fileID: 1341184488890267247}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.702, y: 2.073, z: 0}
+  m_LocalPosition: {x: 21, y: 2.073, z: 0}
   m_LocalScale: {x: 0.8, y: 2.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 2083903525173224586}
   - component: {fileID: 6417144119718251560}
   m_Layer: 2
-  m_Name: Raw Metal
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 1507335179446789511}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.71, y: -5.98, z: 0}
+  m_LocalPosition: {x: 14.008, y: -5.98, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1691,70 +1691,70 @@ Tilemap:
   - first: {x: 16, y: -8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
+      m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 17, y: -8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
+      m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 18, y: -8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
+      m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 15, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
+      m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 18, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
+      m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 14, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
+      m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 15, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
+      m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
@@ -1810,15 +1810,15 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 12
+  - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 9c050efc86ae6cb408abd8982ad9d8ae, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 7
+    m_Data: {fileID: 11400000, guid: 3390cace2b1871844aae1406e8e8c1ac, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 12
+  - m_RefCount: 5
     m_Data: {fileID: 21300000, guid: 97ff788dfcc9d1b4b965008633d009d2, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 7
+    m_Data: {fileID: 21300000, guid: c6ecf83820c1a1045bb48f8566fb7d95, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 12
     m_Data:
@@ -1839,9 +1839,9 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 0
-    m_Data: {r: 5.9653e-41, g: 5.9653e-41, b: 5.9653e-41, a: 5.9653e-41}
-  - m_RefCount: 12
+  - m_RefCount: 7
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - m_RefCount: 5
     m_Data: {r: 0.37126204, g: 0.764151, b: 0.76862746, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1942,7 +1942,7 @@ Transform:
   m_GameObject: {fileID: 3327754581701948224}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.7, y: 3.98, z: 0}
+  m_LocalPosition: {x: 14.998, y: 3.98, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2004,7 +2004,7 @@ GameObject:
   - component: {fileID: 8727205007413070473}
   - component: {fileID: 9087589480446941926}
   m_Layer: 2
-  m_Name: Raw Metal
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2019,7 +2019,7 @@ Transform:
   m_GameObject: {fileID: 3400138202818332433}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.67, y: -6.49, z: 0}
+  m_LocalPosition: {x: 14.968, y: -6.49, z: 0}
   m_LocalScale: {x: 0.8, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2096,7 +2096,7 @@ Transform:
   m_GameObject: {fileID: 3563192658657429510}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.727, y: -5.038, z: 0}
+  m_LocalPosition: {x: 19.025, y: -5.038, z: 0}
   m_LocalScale: {x: 2.4, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2173,7 +2173,7 @@ Transform:
   m_GameObject: {fileID: 4836761463933793395}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.2, y: 2.53, z: 0}
+  m_LocalPosition: {x: 16.498001, y: 2.53, z: 0}
   m_LocalScale: {x: 1.48, y: 5.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2235,7 +2235,7 @@ GameObject:
   - component: {fileID: 2777545079970624337}
   - component: {fileID: 3121177796418657977}
   m_Layer: 2
-  m_Name: Raw Metal
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2250,7 +2250,7 @@ Transform:
   m_GameObject: {fileID: 4988342270392427772}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.69, y: -7.5, z: 0}
+  m_LocalPosition: {x: 17.988, y: -7.5, z: 0}
   m_LocalScale: {x: 0.8, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2327,7 +2327,7 @@ Transform:
   m_GameObject: {fileID: 6066273650162142324}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.66, y: -3.99, z: 0}
+  m_LocalPosition: {x: 17.958, y: -3.99, z: 0}
   m_LocalScale: {x: 2.4, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2451,7 +2451,7 @@ Transform:
   m_GameObject: {fileID: 6568022039644625924}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.13, y: 4.46, z: 0}
+  m_LocalPosition: {x: 19.428, y: 4.46, z: 0}
   m_LocalScale: {x: 4, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2528,7 +2528,7 @@ Transform:
   m_GameObject: {fileID: 6704276830189917412}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.74, y: -5.9, z: 0}
+  m_LocalPosition: {x: 18.038, y: -5.9, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2605,7 +2605,7 @@ Transform:
   m_GameObject: {fileID: 6768934179201082932}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.72, y: -6.93, z: 0}
+  m_LocalPosition: {x: 20.018, y: -6.93, z: 0}
   m_LocalScale: {x: 2.4, y: 2.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2682,7 +2682,7 @@ Transform:
   m_GameObject: {fileID: 7296483541908652163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.18, y: -3.05, z: 0}
+  m_LocalPosition: {x: 17.478, y: -3.05, z: 0}
   m_LocalScale: {x: 1.6, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2759,7 +2759,7 @@ Transform:
   m_GameObject: {fileID: 7661613053870437766}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.64, y: 3.09, z: 0}
+  m_LocalPosition: {x: 17.938, y: 3.09, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2869,7 +2869,7 @@ Transform:
   m_GameObject: {fileID: 8925458738402934793}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.24, y: 2.99, z: 0}
+  m_LocalPosition: {x: 14.538, y: 2.99, z: 0}
   m_LocalScale: {x: 1.6, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

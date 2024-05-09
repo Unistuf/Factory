@@ -1353,7 +1353,7 @@ GameObject:
   - component: {fileID: 1047336866036443486}
   - component: {fileID: 6045555163778093872}
   m_Layer: 2
-  m_Name: Electronic Salvage
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1368,7 +1368,7 @@ Transform:
   m_GameObject: {fileID: 2151965512496987686}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.72, y: -7.51, z: 0}
+  m_LocalPosition: {x: 27.99, y: -7.51, z: 0}
   m_LocalScale: {x: 0.79999995, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1430,7 +1430,7 @@ GameObject:
   - component: {fileID: 1932444236280868253}
   - component: {fileID: 5259010900734620690}
   m_Layer: 2
-  m_Name: Electronic Salvage
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1445,7 +1445,7 @@ Transform:
   m_GameObject: {fileID: 3541026817012471165}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.62, y: 4.12, z: 0}
+  m_LocalPosition: {x: 23.890001, y: 4.12, z: 0}
   m_LocalScale: {x: 0.79999995, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1529,6 +1529,83 @@ Transform:
   - {fileID: 670405789939990514}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4630799932045073185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 451097705597496906}
+  - component: {fileID: 8862240769918936939}
+  m_Layer: 2
+  m_Name: Lithium
+  m_TagString: Resource
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &451097705597496906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630799932045073185}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 28.02, y: -1.98, z: 0}
+  m_LocalScale: {x: 0.79999995, y: 0.8, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 670405789939990514}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &8862240769918936939
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630799932045073185}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &4816930086450526677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,7 +1632,7 @@ Transform:
   m_GameObject: {fileID: 4816930086450526677}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.215, y: -7.45, z: 0}
+  m_LocalPosition: {x: 29.485, y: -7.45, z: 0}
   m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1617,7 +1694,7 @@ GameObject:
   - component: {fileID: 8381948440047289255}
   - component: {fileID: 714457989743062240}
   m_Layer: 2
-  m_Name: Electronic Salvage
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1632,7 +1709,7 @@ Transform:
   m_GameObject: {fileID: 5053662126606215951}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.7, y: 3.46, z: 0}
+  m_LocalPosition: {x: 22.970001, y: 3.46, z: 0}
   m_LocalScale: {x: 0.79999995, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1694,7 +1771,7 @@ GameObject:
   - component: {fileID: 5790945847889484343}
   - component: {fileID: 3087666231525375943}
   m_Layer: 2
-  m_Name: Electronic Salvage
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1709,7 +1786,7 @@ Transform:
   m_GameObject: {fileID: 5568960770629276419}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.69, y: 5, z: 0}
+  m_LocalPosition: {x: 27.960001, y: 5, z: 0}
   m_LocalScale: {x: 0.79999995, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1771,7 +1848,7 @@ GameObject:
   - component: {fileID: 3005620930939012323}
   - component: {fileID: 5609626797579517739}
   m_Layer: 2
-  m_Name: Electronic Salvage
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1786,7 +1863,7 @@ Transform:
   m_GameObject: {fileID: 5773174534946099779}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.11, y: 5, z: 0}
+  m_LocalPosition: {x: 24.380001, y: 5, z: 0}
   m_LocalScale: {x: 0.79999995, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1868,6 +1945,9 @@ Transform:
   m_Children:
   - {fileID: 4648881283074328076}
   - {fileID: 2045758748229268839}
+  - {fileID: 5398922339817276696}
+  - {fileID: 451097705597496906}
+  - {fileID: 3615746372583815543}
   - {fileID: 4114422413449564991}
   - {fileID: 8134917880720951548}
   - {fileID: 5790945847889484343}
@@ -1880,6 +1960,83 @@ Transform:
   - {fileID: 5985562743803554266}
   m_Father: {fileID: 2998197370612465070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6513048089745675650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3615746372583815543}
+  - component: {fileID: 8798140428933821215}
+  m_Layer: 2
+  m_Name: Lithium
+  m_TagString: Resource
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3615746372583815543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6513048089745675650}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 27.02, y: -0.98, z: 0}
+  m_LocalScale: {x: 0.79999995, y: 0.8, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 670405789939990514}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &8798140428933821215
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6513048089745675650}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6628150406501547055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,7 +2048,7 @@ GameObject:
   - component: {fileID: 8134917880720951548}
   - component: {fileID: 4177839042300078765}
   m_Layer: 2
-  m_Name: Electronic Salvage
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1906,7 +2063,7 @@ Transform:
   m_GameObject: {fileID: 6628150406501547055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.705, y: -5.044, z: 0}
+  m_LocalPosition: {x: 29.975, y: -5.044, z: 0}
   m_LocalScale: {x: 0.79999995, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1983,7 +2140,7 @@ Transform:
   m_GameObject: {fileID: 7049865346487541531}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.694, y: -6.557, z: 0}
+  m_LocalPosition: {x: 22.964, y: -6.557, z: 0}
   m_LocalScale: {x: 0.79999995, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2060,7 +2217,7 @@ Transform:
   m_GameObject: {fileID: 7189133560809363035}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.707, y: -6.015, z: 0}
+  m_LocalPosition: {x: 29.977001, y: -6.015, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2122,7 +2279,7 @@ GameObject:
   - component: {fileID: 4114422413449564991}
   - component: {fileID: 7861255035647576531}
   m_Layer: 2
-  m_Name: Electronic Salvage
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2137,7 +2294,7 @@ Transform:
   m_GameObject: {fileID: 7230562935375304371}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.711, y: -8.031, z: 0}
+  m_LocalPosition: {x: 26.981, y: -8.031, z: 0}
   m_LocalScale: {x: 0.79999995, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2300,6 +2457,66 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 28, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 2
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 29, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 2
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 30, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 2
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 27, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 2
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 29, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 2
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 30, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 2
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 23, y: 3, z: 0}
     second:
       serializedVersion: 2
@@ -2374,8 +2591,8 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 6
+    m_Data: {fileID: 11400000, guid: 8f6a70e05716cbb43a845b7248856176, type: 2}
   - m_RefCount: 11
     m_Data: {fileID: 11400000, guid: 3390cace2b1871844aae1406e8e8c1ac, type: 2}
   - m_RefCount: 3
@@ -2383,14 +2600,14 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 6
+    m_Data: {fileID: 21300000, guid: a15ec4fe743b9b140966416ea178fcdc, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 21300000, guid: 97ff788dfcc9d1b4b965008633d009d2, type: 3}
   - m_RefCount: 11
     m_Data: {fileID: 21300000, guid: c6ecf83820c1a1045bb48f8566fb7d95, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 14
+  - m_RefCount: 20
     m_Data:
       e00: 1
       e01: 0
@@ -2413,6 +2630,8 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 3
     m_Data: {r: 0.37126204, g: 0.764151, b: 0.76862746, a: 1}
+  - m_RefCount: 6
+    m_Data: {r: 1, g: 1, b: 0.514151, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2512,7 +2731,7 @@ Transform:
   m_GameObject: {fileID: 8371897645231498820}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.72, y: -7.983, z: 0}
+  m_LocalPosition: {x: 23.99, y: -7.983, z: 0}
   m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2574,7 +2793,7 @@ GameObject:
   - component: {fileID: 9093260603166988628}
   - component: {fileID: 853216911821109935}
   m_Layer: 2
-  m_Name: Electronic Salvage
+  m_Name: Electronic Scrap
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2589,7 +2808,7 @@ Transform:
   m_GameObject: {fileID: 8933657487251822910}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.74, y: 3.99, z: 0}
+  m_LocalPosition: {x: 26.01, y: 3.99, z: 0}
   m_LocalScale: {x: 0.79999995, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2639,4 +2858,81 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!1 &9108349922447381347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5398922339817276696}
+  - component: {fileID: 3334584653910960243}
+  m_Layer: 2
+  m_Name: Lithium
+  m_TagString: Resource
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5398922339817276696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9108349922447381347}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.52, y: -1.45, z: 0}
+  m_LocalScale: {x: 0.79999995, y: 1.6, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 670405789939990514}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &3334584653910960243
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9108349922447381347}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
