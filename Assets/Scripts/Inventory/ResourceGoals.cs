@@ -61,7 +61,7 @@ public class ResourceGoals : MonoBehaviour
         foreach (Item item in tierGoals[currentTier].requirements)
         {
             // And if we meet it, tick the counter up and debug log that we have fulfilled the goal
-            if (item.amount < inventory.GetItem(item.name))
+            if (item.amount <= inventory.GetItem(item.name))
             {
                 fulfilledItems++;
                 Debug.Log($"{item.name} fulfilled, {fulfilledItems} total, {tierGoals[currentTier].requirements.Length - fulfilledItems} remaining");

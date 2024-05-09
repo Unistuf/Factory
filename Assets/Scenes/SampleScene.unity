@@ -7477,9 +7477,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1462901516095049235, guid: aa17b3ff23ad01647ab3644f03e5bece, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471569266693510826, guid: aa17b3ff23ad01647ab3644f03e5bece, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.05
+      objectReference: {fileID: 0}
     - target: {fileID: 2500011322469706036, guid: aa17b3ff23ad01647ab3644f03e5bece, type: 3}
       propertyPath: m_Name
       value: Zone Starter
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627156494006424502, guid: aa17b3ff23ad01647ab3644f03e5bece, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.04
       objectReference: {fileID: 0}
     - target: {fileID: 4245954332653033861, guid: aa17b3ff23ad01647ab3644f03e5bece, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7520,6 +7532,10 @@ PrefabInstance:
     - target: {fileID: 4245954332653033861, guid: aa17b3ff23ad01647ab3644f03e5bece, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638567273359299320, guid: aa17b3ff23ad01647ab3644f03e5bece, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.53
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
