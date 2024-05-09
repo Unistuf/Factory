@@ -63,8 +63,11 @@ public class SceneManagerer : MonoBehaviour
         else
         {
             SetResolution(0);
-        }
+            PlayerPrefs.SetInt("fullscreenMode", fsToggle.isOn ? 1 : 3);
 
+            PlayerPrefs.Save();
+
+        }
 
     }
 
